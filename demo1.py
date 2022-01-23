@@ -10,7 +10,7 @@ rule = re.compile(r'''</script><link.*?content='.*?"original":"(?P<LINK>.*?)"}''
 pid_url_list = []
 download_url_list = set()
 # 得到所有插画的pid
-uid = 8103614
+uid = 8103614  #input('Please enter the uid')
 url = f"https://www.pixiv.net/ajax/user/{uid}/profile/all?lang=zh"
 resp = requests.get(url=url, headers=headers)
 resp.encoding = resp.apparent_encoding
