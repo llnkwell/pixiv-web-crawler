@@ -11,7 +11,7 @@ import requests
 from requests.exceptions import ProxyError
 ```
 
-首先导入的是正则表达式模块，requests模块，，另外导入的是多线程库中的ThreadPoolExecutor, wait 方法以及与前文一样的 ProxyError 便于后文接收异常并进行处理。
+首先导入的是正则表达式模块，requests模块，，另外导入的是多线程库中的ThreadPoolExecutor, wait 方法以 ProxyError 便于后文接收异常并进行处理。
 
 ```
 headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -23,9 +23,9 @@ uid = 8103614
 url = f"https://www.pixiv.net/ajax/user/{uid}/profile/all?lang=zh"
 ```
 
-接下来和上次一样定义了 headers 参数，其中也带有 referer 防盗链信息；
+接下定义了 headers 参数，其中也带有 referer 防盗链信息；
 
-rule 变量仍然是用于后文在页面html代码中正则匹配原图网址的规则；
+rule 变量是用于后文在页面html代码中正则匹配原图网址的规则；
 
 pid_url_list 列表用于接收插画网址；download_url_list 为集合，用于接收原图网址，设置成集合可以保证网址不重复。
 
