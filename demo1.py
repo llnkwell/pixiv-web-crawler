@@ -65,4 +65,4 @@ executor_download = ThreadPoolExecutor(max_workers=12)
 while len(download_url_list) != 0:
     download_task = [executor_download.submit(down_ill, d_url) for d_url in download_url_list]
     wait(download_task, timeout=length)
-print('\n All downloaded!')
+print('\n All Downloaded!')
